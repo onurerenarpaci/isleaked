@@ -1,0 +1,11 @@
+[package]
+name = "isleaked"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+array2d = "0.3.2"
+bytevec = "0.2.0"
+generic-array = "1.0.0"
+num = "0.4.3"
+sha2 = "0.10.8"
