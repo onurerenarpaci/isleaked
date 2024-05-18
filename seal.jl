@@ -19,18 +19,18 @@ eva = Evaluator(ctx)
 dec = Decryptor(ctx, sk)
 encoder = BatchEncoder(ctx)
 
-plain = 4
+pod_mat = collect(UInt64, 1:slot_count(encoder))
 
-plain_value = Plaintext()
-encode!(plain_value, plain, encoder)
+plain_mat = Plaintext()
+encode!(plain_mat, pod_mat, encoder)
 
-encrypted_value = Ciphertext()
-encrypt!(encrypted_value, plain_value, ctx)
+enc_mat = Ciphertext()
+encrypt!(enc_mat, plain_mat, enc)
+print
 
-add_inplace!(encrypted_value, encrypted_value, eva)
+
+add_inplace!(enc_mat, enc_mat, eva)
 
 plain_result = Plaintext()
-decrypt!(plain_result, encrypted_value, ctx)
-decode!(plain, plain_result, encoder)
-
-plain_result
+decrypt!(plain_result, enc_mat, dec)
+decode!(pod_mat, plain_result, encoder)
