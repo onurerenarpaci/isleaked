@@ -1,5 +1,5 @@
 {
-  "name": "isleaked",
+  "name": "isleaked-frontend",
   "version": "1.0.0",
   "description": "check if your password is leaked privately",
   "main": "index.js",
@@ -7,8 +7,5 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "node-seal": "^5.1.3"
-  }
+  "license": "ISC"
 }
